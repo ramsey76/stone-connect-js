@@ -1,4 +1,4 @@
-import { Status, OperationMode } from './models';
+import { Status, OperationMode } from './models.js';
 type Info = Status & {
     comfortSetpoint?: number;
     ecoSetpoint?: number;

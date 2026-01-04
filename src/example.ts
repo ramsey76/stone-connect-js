@@ -1,6 +1,6 @@
 // example.ts
-import { StoneConnectClient } from './client';
-import { OperationMode } from './models';
+import { StoneConnectClient } from './client.js';
+import { OperationMode } from './models.js';
 
 
 async function main() {

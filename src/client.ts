@@ -1,7 +1,7 @@
 // src/client.ts
 
-import { Status, OperationMode } from './models';
-import { ConnectionError } from './exceptions';
+import { Status, OperationMode } from './models.js';
+import { ConnectionError } from './exceptions.js';
 
 
 // Simulated Info and Schedule types for demonstration

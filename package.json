@@ -11,6 +11,10 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "@types/node": "^20.19.27",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0",
+    "undici": "^5.29.0",
+    "undici-types": "^5.28.4"
   }
 }
