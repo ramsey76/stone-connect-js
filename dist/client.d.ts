@@ -1,0 +1,48 @@
+import { Status, OperationMode } from './models';
+type Info = Status & {
+    comfortSetpoint?: number;
+    ecoSetpoint?: number;
+    antifreezeSetpoint?: number;
+    loadSizeWatt?: number;
+    host?: string;
+    port?: number;
+    username?: string;
+    password?: string;
+};
+type Schedule = any;
+export declare class StoneConnectClient {
+    private status;
+    private info;
+    private schedule;
+    constructor(host: string, port?: number, username?: string, password?: string);
+    connect(): Promise<void>;
+    close(): Promise<void>;
+    getInfo(): Promise<Info>;
+    getStatus(): Promise<Status>;
+    getSchedule(): Promise<Schedule | null>;
+    setTemperatureAndMode(temperature: number, mode: OperationMode): Promise<void>;
+    setTemperature(temperature: number, mode?: OperationMode): Promise<void>;
+    setOperationMode(mode: OperationMode): Promise<void>;
+    isOnline(): Promise<boolean>;
+    hasPowerMeasurementSupport(): Promise<boolean>;
+    setComfortMode(): Promise<void>;
+    setEcoMode(): Promise<void>;
+    setAntifreezeMode(): Promise<void>;
+    setManualTemperature(temperature: number): Promise<void>;
+    setPowerMode(mode: OperationMode): Promise<void>;
+    setStandby(): Promise<void>;
+    getCurrentTemperature(): Promise<number | undefined>;
+    getTargetTemperature(): Promise<number | undefined>;
+    isHeating(): Promise<boolean | undefined>;
+    getSignalStrength(): Promise<number | undefined>;
+    isLocked(): Promise<boolean | undefined>;
+    getErrorCode(): Promise<number | undefined>;
+    getDailyEnergy(): Promise<number | undefined>;
+    getPowerConsumption(): Promise<number | undefined>;
+    private _validateTemperature;
+    private _isPowerMode;
+    private _isPresetMode;
+    private _isCustomTemperatureMode;
+    private _getPresetSetpoint;
+}
+export {};

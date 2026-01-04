@@ -1,0 +1,16 @@
+{
+  "name": "stone-connect-ts",
+  "version": "1.0.0",
+  "description": "TypeScript port of the stone-connect Python project.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/example.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
